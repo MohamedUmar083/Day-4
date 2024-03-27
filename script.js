@@ -43,3 +43,16 @@
 */
 
 
+//3. Sum of all numbers in an array
+
+var sum = function (arr)
+{
+    var tot = 0;
+    for(var i=0;i<arr.length;i++)
+    {
+        var tot = tot+arr[i];
+        
+    }
+    return tot;
+}
+console.log(sum([1,2,3,4,5]))
