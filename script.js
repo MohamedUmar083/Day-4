@@ -45,6 +45,8 @@
 
 //3. Sum of all numbers in an array
 
+// Annonymous Function:-
+/*
 var sum = function (arr)
 {
     var tot = 0;
@@ -56,3 +58,34 @@ var sum = function (arr)
     return tot;
 }
 console.log(sum([1,2,3,4,5]))
+*/
+
+
+// IIFE:-
+/*
+(function (arr)
+{
+    var tot = 0;
+    for(var i=0;i<arr.length;i++)
+    {
+        var tot = tot+arr[i];
+        
+    }
+    console.log(tot);
+})
+([1,2,3,4,5]);
+*/
+
+// Arrow Function:-
+/*
+var sum = (arr)=>{
+    var tot = 0;
+    for(var i=0;i<arr.length;i++)
+    {
+        var tot = tot+arr[i];
+        
+    }
+    return tot
+}
+console.log(sum([1,2,3,4,5]));
+*/
