@@ -429,6 +429,8 @@ var array = [1, 2, 3, 4, 2, 3, 5];
 
 // 8.Rotate an array by k times
 
+/*
+
 //Annonymous Function:-
 var array = [1, 2, 3, 4, 5,6,7,8,9];
 var k = 5;
@@ -442,3 +444,16 @@ var rotateArray = function (arr, k) {
 
 
 console.log(rotateArray(array, k));
+
+*/
+
+//IIFE Function:-
+var array = [1, 2, 3, 4, 5,6,7,8,9];
+var k = 5;
+(function (arr, k) {
+  for (var i = 0; i < k; i++) {
+      var removedElement = arr.shift();
+      arr.push(removedElement);
+  }
+  console.log(arr);
+})(array,k)
