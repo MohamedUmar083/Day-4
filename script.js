@@ -55,7 +55,7 @@
 
 //2.Convert all the strings to title caps in a string array
 
-
+/*
 //Annonymous Function
 const word = ["yOu kNoW wHo i aM"];
 var caps = function (word){
@@ -74,7 +74,24 @@ var caps = function (word){
 }
 
 console.log(caps(word))
+*/
 
+//IIFE Function:-
+const word = ["yOu kNoW wHo i aM"];
+(function (word){
+  var wordString = word.toString();
+  var lower = wordString.toLowerCase()
+  var split = lower.split(" ")
+  var total = []
+  for(var i=0;i<split.length;i++)
+  {
+    var capital = split[i].charAt(0).toUpperCase();
+    var rem = split[i].slice(1);
+    total.push(capital+rem);
+  }
+
+  console.log(total.join(" "));
+})(word)
 
 
 
