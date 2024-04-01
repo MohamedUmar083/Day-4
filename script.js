@@ -326,7 +326,7 @@ console.log(palindrome(array));
 
 //6. Return median of two sorted arrays of the same size.
 
-
+/*
 //Anonymous Function:-
 var a1 = [4,2,3,1];
 var a2 = [8,6,7,5];
@@ -347,13 +347,32 @@ var median = function (arr1,arr2){
       return oddMedian;
     }
   }
-  //console.log(array)
+  
 }
 
 console.log(median(a1,a2))
-
-
-
+*/
 
 
 //IIFE Function:-
+
+var a1 = [4,2,1];
+var a2 = [8,6,7,5];
+(function (arr1,arr2){
+  var array = [...arr1,...arr2].sort();
+  var length = array.length;
+  for(var i=0;i<length;i++)
+  {
+    if(length%2===0)
+    {
+      var evenMedian = (array[length/2] + array[length-1]/2)/2;
+      console.log(evenMedian);
+    }
+    else
+    {
+      var oddMedian = array[Math.floor(length/2)]
+      console.log(oddMedian);
+    }
+  }
+  
+})(a1,a2);
