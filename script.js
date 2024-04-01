@@ -53,52 +53,30 @@
 
 
 
-//3. Sum of all numbers in an array
+//2.Convert all the strings to title caps in a string array
 
-// Annonymous Function:-
-/*
-var sum = function (arr)
-{
-    var tot = 0;
-    for(var i=0;i<arr.length;i++)
-    {
-        var tot = tot+arr[i];
-        
-    }
-    return tot;
+
+//Annonymous Function
+const word = ["yOu kNoW wHo i aM"];
+var caps = function (word){
+  var wordString = word.toString();
+  var lower = wordString.toLowerCase()
+  var split = lower.split(" ")
+  var total = []
+  for(var i=0;i<split.length;i++)
+  {
+    var capital = split[i].charAt(0).toUpperCase();
+    var rem = split[i].slice(1);
+    total.push(capital+rem);
+  }
+
+  return total.join(" ")
 }
-console.log(sum([1,2,3,4,5]))
-*/
+
+console.log(caps(word))
 
 
-// IIFE:-
-/*
-(function (arr)
-{
-    var tot = 0;
-    for(var i=0;i<arr.length;i++)
-    {
-        var tot = tot+arr[i];
-        
-    }
-    console.log(tot);
-})
-([1,2,3,4,5]);
-*/
 
-// Arrow Function:-
-/*
-var sum = (arr)=>{
-    var tot = 0;
-    for(var i=0;i<arr.length;i++)
-    {
-        var tot = tot+arr[i];
-        
-    }
-    return tot
-}
-console.log(sum([1,2,3,4,5]));
-*/
 
 
 
@@ -209,7 +187,7 @@ console.log(getPrimeNumbers(numbers));
 })([1,2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,1,16,17,18,19,20]);
 */
 
-
+/*
 //Arrow Function:-
 var getPrimeNumbers = (arr) => {
   var primeNumbers = [];
@@ -233,6 +211,17 @@ var getPrimeNumbers = (arr) => {
 const numbers = [1,2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,1,16,17,18,19,20];
 
 console.log(getPrimeNumbers(numbers));
+*/
+
+
+
+
+
+
+
+
+
+
 
 
 //5. Return all the palindromes in an array
