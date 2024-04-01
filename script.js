@@ -43,6 +43,16 @@
 */
 
 
+
+
+
+
+
+
+
+
+
+
 //3. Sum of all numbers in an array
 
 // Annonymous Function:-
@@ -107,7 +117,7 @@ var sumArray = function (arr) {
 console.log(sumArray(array));
 */
 
-
+/*
 //IIFE Function:-
 (function (arr) {
   var sum = 0;
@@ -116,6 +126,31 @@ console.log(sumArray(array));
   }
   console.log(sum);
 })([1, 2, 3, 4, 5, 6]);
+*/
+
+
+//Arrow Function:-
+const array = [1, 2, 3, 4, 5, 6];
+var sumArray =  (arr) => {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+};
+
+console.log(sumArray(array));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
