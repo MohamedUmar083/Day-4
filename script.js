@@ -158,7 +158,7 @@ console.log(sumArray(array));
 
 //4.Return all the prime numbers in an array
 
-
+/*
 //Anonymous Function:-
 var getPrimeNumbers = function (arr) {
   var primeNumbers = [];
@@ -183,7 +183,30 @@ var getPrimeNumbers = function (arr) {
 const numbers = [1,2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,1,16,17,18,19,20];
 
 console.log(getPrimeNumbers(numbers));
+*/
 
+
+//IIFE Function :-
+
+(function (arr) {
+  var primeNumbers = [];
+  for (var i = 0; i < arr.length; i++) {
+      var num = arr[i];
+      if (num > 1) {
+          var isPrime = true;
+          for (var j = 2; j <= Math.sqrt(num); j++) {
+              if (num % j === 0) {
+                  isPrime = false;
+                  break;
+              }
+          }
+          if (isPrime) {
+              primeNumbers.push(num);
+          }
+      }
+  }
+  console.log(primeNumbers);
+})([1,2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,1,16,17,18,19,20])
 
 
 
