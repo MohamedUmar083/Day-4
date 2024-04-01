@@ -98,8 +98,8 @@ console.log(sum([1,2,3,4,5]));
 const array = [1, 2, 3, 4, 5, 6];
 var sumArray = function (arr) {
   var sum = 0;
-  for (var i = 0; i < array.length; i++) {
-    sum = sum + array[i];
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
   }
   return sum;
 };
@@ -109,7 +109,13 @@ console.log(sumArray(array));
 
 
 //IIFE Function:-
-
+(function (arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  console.log(sum);
+})([1, 2, 3, 4, 5, 6]);
 
 
 
