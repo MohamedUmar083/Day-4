@@ -89,3 +89,82 @@ var sum = (arr)=>{
 }
 console.log(sum([1,2,3,4,5]));
 */
+
+
+
+// 3.Sum of all numbers in an array
+/*
+//Annonymous Function:-
+const array = [1, 2, 3, 4, 5, 6];
+var sumArray = function (arr) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum;
+};
+
+console.log(sumArray(array));
+*/
+
+
+//IIFE Function:-
+
+
+
+
+//5. Return all the palindromes in an array
+
+/*
+// Annonymous Function
+const array = ["racecar", "malayalam", "mobile", "port", "sugus"];
+var palindrome = function (arr){
+  var palind = []
+  for(var i =0 ;i<arr.length;i++)
+  {
+    var revarray = arr[i].split("").reverse().join("");
+    if(arr[i]===revarray){
+      palind.push(revarray)
+    }
+  }
+return palind;
+}
+
+console.log(palindrome(array));
+
+*/
+
+/*
+//IIFE Function.
+const array = ["racecar", "malayalam", "mobile", "port", "sugus"];
+(function (arr){
+  palind = []
+  for(var i =0 ;i<arr.length;i++)
+  {
+    var revarray = arr[i].split("").reverse().join("");
+    if(arr[i]===revarray){
+      palind.push(revarray)
+    }
+  }
+console.log(palind);
+
+})(array);
+*/
+
+/*
+//Arrow Function
+const array = ["racecar", "malayalam", "mobile", "port", "sugus"];
+var palindrome = (arr)=>{
+  palind = []
+  for(var i =0 ;i<arr.length;i++)
+  {
+    var revarray = arr[i].split("").reverse().join("");
+    if(arr[i]===revarray){
+      palind.push(revarray)
+    }
+  }
+return palind;
+}
+
+console.log(palindrome(array));
+*/
