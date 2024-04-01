@@ -404,7 +404,7 @@ var array = [1, 2, 3, 4, 2, 3, 5];
 console.log(removeDuplicates(array));
 */
 
-
+/*
 //IIFE Function:-
 var array = [1, 2, 3, 4, 2, 3, 5];
 (function (arr) {
@@ -415,4 +415,30 @@ var array = [1, 2, 3, 4, 2, 3, 5];
       }
   }
   console.log(uniqueArray);
-})(array)
+})(array);
+
+*/
+
+
+
+
+
+
+
+
+
+// 8.Rotate an array by k times
+
+//Annonymous Function:-
+var array = [1, 2, 3, 4, 5,6,7,8,9];
+var k = 5;
+var rotateArray = function (arr, k) {
+  for (var i = 0; i < k; i++) {
+      var removedElement = arr.shift();
+      arr.push(removedElement);
+  }
+  return arr;
+}
+
+
+console.log(rotateArray(array, k));
