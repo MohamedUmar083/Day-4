@@ -353,9 +353,8 @@ var median = function (arr1,arr2){
 console.log(median(a1,a2))
 */
 
-
+/*
 //IIFE Function:-
-
 var a1 = [4,2,1];
 var a2 = [8,6,7,5];
 (function (arr1,arr2){
@@ -376,3 +375,29 @@ var a2 = [8,6,7,5];
   }
   
 })(a1,a2);
+*/
+
+
+
+
+
+
+
+
+
+
+// 7.Remove duplicates from an array
+
+//Annonymous Function:-
+var removeDuplicates = function (arr) {
+  var uniqueArray = [];
+  for (var i = 0; i < arr.length; i++) {
+      if (uniqueArray.indexOf(arr[i]) === -1) {
+          uniqueArray.push(arr[i]);
+      }
+  }
+  return uniqueArray;
+}
+
+var array = [1, 2, 3, 4, 2, 3, 5];
+console.log(removeDuplicates(array));
